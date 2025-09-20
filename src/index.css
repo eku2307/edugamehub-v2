@@ -1,0 +1,252 @@
+/* ============================= */
+/*       CSS VARIABLES           */
+/* ============================= */
+:root {
+  --success-bg: #d1fae5;
+  --success-text: #065f46;
+  --warning-bg: #fef3c7;
+  --warning-text: #78350f;
+  --physics-bg: #e0f2fe;
+  --physics-text: #0369a1;
+  --physics-accent: #0284c7;
+  --chemistry-bg: #fef2f2;
+  --chemistry-text: #b91c1c;
+  --chemistry-accent: #ef4444;
+  --math-bg: #f0fdfa;
+  --math-text: #065f46;
+  --math-accent: #10b981;
+  --biology-bg: #fefcf3;
+  --biology-text: #78350f;
+  --biology-accent: #f59e0b;
+  --analytics-bg: #ede9fe;
+  --analytics-text: #5b21b6;
+  --analytics-accent: #7c3aed;
+  --bg-secondary: #f9fafb;
+  --border-light: #e5e7eb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+}
+
+/* ============================= */
+/*       GLOBAL STYLES           */
+/* ============================= */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f4f6;
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============================= */
+/*       CARD / GRID STYLES       */
+/* ============================= */
+.card-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.card-grid.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card-grid.cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+/* ============================= */
+/*       SUBJECT CARDS           */
+/* ============================= */
+.subject-card .progress-container {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.subject-card .progress-bar {
+  height: 100%;
+  border-radius: 4px;
+  background: var(--math-accent); /* fallback, overridden inline */
+}
+
+/* ============================= */
+/*       BUTTONS / SMALL UI       */
+/* ============================= */
+button, .play-button {
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ============================= */
+/*       RECENT ACTIVITY         */
+/* ============================= */
+.activity-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  transition: background 0.2s ease;
+}
+
+.activity-item:hover {
+  background-color: #f3f4f6;
+}
+/* ============================= */
+/*       CSS VARIABLES           */
+/* ============================= */
+:root {
+  --success-bg: #d1fae5;
+  --success-text: #065f46;
+  --warning-bg: #fef3c7;
+  --warning-text: #78350f;
+  --physics-bg: #e0f2fe;
+  --physics-text: #0369a1;
+  --physics-accent: #0284c7;
+  --chemistry-bg: #fef2f2;
+  --chemistry-text: #b91c1c;
+  --chemistry-accent: #ef4444;
+  --math-bg: #f0fdfa;
+  --math-text: #065f46;
+  --math-accent: #10b981;
+  --biology-bg: #fefcf3;
+  --biology-text: #78350f;
+  --biology-accent: #f59e0b;
+  --analytics-bg: #ede9fe;
+  --analytics-text: #5b21b6;
+  --analytics-accent: #7c3aed;
+  --bg-secondary: #f9fafb;
+  --border-light: #e5e7eb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+}
+
+/* ============================= */
+/*       GLOBAL STYLES           */
+/* ============================= */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f4f6;
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============================= */
+/*       CARD / GRID STYLES       */
+/* ============================= */
+.card-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.card-grid.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card-grid.cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+/* ============================= */
+/*       SUBJECT CARDS           */
+/* ============================= */
+.subject-card .progress-container {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.subject-card .progress-bar {
+  height: 100%;
+  border-radius: 4px;
+  background: var(--math-accent); /* fallback, overridden inline */
+}
+
+/* ============================= */
+/*       BUTTONS / SMALL UI       */
+/* ============================= */
+button, .play-button {
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ============================= */
+/*       RECENT ACTIVITY         */
+/* ============================= */
+.activity-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  transition: background 0.2s ease;
+}
+
+.activity-item:hover {
+  background-color: #f3f4f6;
+}

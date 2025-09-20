@@ -1,0 +1,102 @@
+{
+  "name": "EduGameHub - Interactive Learning Platform",
+  "short_name": "EduGameHub",
+  "description": "Interactive educational games for Physics, Chemistry, Mathematics, and Biology",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#e0f2fe",
+  "background_color": "#fefefe",
+  "orientation": "portrait-primary",
+  "categories": ["education", "games", "learning"],
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshots/mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Physics Games",
+      "short_name": "Physics",
+      "description": "Play interactive physics games",
+      "url": "/physics",
+      "icons": [
+        {
+          "src": "/icons/physics-shortcut.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Chemistry Lab",
+      "short_name": "Chemistry",
+      "description": "Explore chemistry experiments",
+      "url": "/chemistry",
+      "icons": [
+        {
+          "src": "/icons/chemistry-shortcut.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
