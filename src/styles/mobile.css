@@ -137,3 +137,120 @@ canvas {
     transition: none !important;
   }
 }
+/* MOBILE LAYOUT FIXES FOR SIDE PANELS */
+@media screen and (max-width: 768px) {
+  
+  /* Fix two-column layouts to stack vertically */
+  [style*="display: grid"][style*="gridTemplateColumns"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  /* Fix specific grid patterns */
+  [style*="grid-template-columns: 1fr 300px"],
+  [style*="grid-template-columns: 1fr 350px"],
+  [style*="gridTemplateColumns: '1fr 300px'"],
+  [style*="gridTemplateColumns: '1fr 350px'"] {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  /* Make sure all content is visible */
+  .card {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 1rem 0 !important;
+  }
+  
+  /* Fix canvas containers */
+  .game-canvas {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16/10;
+  }
+  
+  /* Force visibility of hidden content */
+  * {
+    overflow-x: visible !important;
+  }
+  
+  /* Fix specific game layouts */
+  .fade-in > div[style*="display: grid"] {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+/* SCROLLING FIXES */
+@media screen and (max-width: 768px) {
+  
+  /* Enable scrolling everywhere */
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Make containers scrollable */
+  .fade-in {
+    overflow-y: auto;
+    max-height: none;
+  }
+  
+  /* Ensure content doesn't get cut off */
+  .card {
+    min-height: auto;
+    overflow: visible;
+  }
+  
+  /* Fix for specific game containers */
+  div[style*="height: 500px"] {
+    height: auto !important;
+    min-height: 300px !important;
+  }
+}
+/* EMERGENCY FIX - Forces all game layouts to work on mobile */
+@media screen and (max-width: 768px) {
+  
+  /* Target the main game container */
+  .fade-in {
+    width: 100% !important;
+    overflow-x: visible !important;
+  }
+  
+  /* Fix any div with grid layout */
+  div[style*="display: grid"],
+  div[style*="gridTemplateColumns"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  /* Ensure all child elements are visible */
+  .fade-in > * {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 1rem 0 !important;
+  }
+  
+  /* Force cards to be full width */
+  .card {
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Make sure content doesn't overflow */
+  * {
+    max-width: 100vw !important;
+    overflow-x: auto !important;
+  }
+  
+  /* Specific fix for side panels */
+  div[style*="350px"],
+  div[style*="300px"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
