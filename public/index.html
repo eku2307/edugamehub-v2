@@ -3,7 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- MOBILE MAGIC TAGS - These stop zoom and make it work like an app -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="EduGameHub">
+    <meta name="format-detection" content="telephone=no">
+    
     <meta name="theme-color" content="#e0f2fe" />
     <meta name="description" content="Interactive educational games for Physics, Chemistry, Mathematics, and Biology. Learn through play with EduGameHub!" />
     
@@ -15,19 +23,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="EduGameHub - Interactive Learning Platform" />
-    <meta property="og:description" content="Learn Physics, Chemistry, Math, and Biology through interactive games" />
-    <meta property="og:image" content="%PUBLIC_URL%/screenshots/desktop.png" />
-    <meta property="og:url" content="https://edugamehub.app" />
-    <meta property="og:type" content="website" />
-    
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="EduGameHub - Interactive Learning Platform" />
-    <meta name="twitter:description" content="Learn Physics, Chemistry, Math, and Biology through interactive games" />
-    <meta name="twitter:image" content="%PUBLIC_URL%/screenshots/desktop.png" />
     
     <title>EduGameHub - Interactive Learning Platform</title>
   </head>
@@ -48,38 +43,6 @@
             });
         });
       }
-      
-      // Install prompt for PWA
-      let deferredPrompt;
-      window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        // Show install button/banner
-        const installBanner = document.createElement('div');
-        installBanner.innerHTML = `
-          <div style="position: fixed; bottom: 20px; right: 20px; background: #e0f2fe; padding: 16px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000; max-width: 300px;">
-            <p style="margin: 0 0 12px 0; font-weight: 600; color: #0277bd;">Install EduGameHub</p>
-            <p style="margin: 0 0 12px 0; font-size: 14px; color: #0277bd;">Get the app for offline learning!</p>
-            <div style="display: flex; gap: 8px;">
-              <button id="install-btn" style="background: #0277bd; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600;">Install</button>
-              <button id="dismiss-btn" style="background: transparent; color: #0277bd; border: 1px solid #0277bd; padding: 8px 16px; border-radius: 6px; cursor: pointer;">Later</button>
-            </div>
-          </div>
-        `;
-        document.body.appendChild(installBanner);
-        
-        document.getElementById('install-btn').addEventListener('click', () => {
-          installBanner.remove();
-          deferredPrompt.prompt();
-          deferredPrompt.userChoice.then((choiceResult) => {
-            deferredPrompt = null;
-          });
-        });
-        
-        document.getElementById('dismiss-btn').addEventListener('click', () => {
-          installBanner.remove();
-        });
-      });
     </script>
   </body>
 </html>

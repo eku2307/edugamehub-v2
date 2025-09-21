@@ -11,19 +11,19 @@ import Chemistry from './pages/Chemistry';
 import Math from './pages/Math';
 import Biology from './pages/Biology';
 import Analytics from './pages/Analytics';
-
-// Import Single Videos Page
 import Videos from './pages/Videos';
 
-// Import Styles
-import './styles/globals.css';
+// Import Styles - MOBILE CSS FIRST!
+import './styles/mobile.css';  // 👈 MOBILE FIXES FIRST
+import './styles/globals.css'; // 👈 THEN REGULAR CSS
 
 function App() {
   return (
     <ThemeProvider>
       <Router>
         <div className="app">
-          <MouseTrail />
+          {/* Only show mouse trail on desktop */}
+          {window.innerWidth > 768 && <MouseTrail />}
           <Layout>
             <Routes>
               {/* Main Pages */}
